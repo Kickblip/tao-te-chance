@@ -60,6 +60,7 @@ const generateChinese = () => {
     for (var i = 0; i < length; i++) {
         const paragraph = document.createElement('p');
         paragraph.innerHTML = randomChineseCharacters();
+        paragraph.classList.add('chinese-line');
         document.getElementById('chinese').appendChild(paragraph);
     };
 };
