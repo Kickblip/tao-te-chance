@@ -13,6 +13,9 @@ document.getElementById('regenerate').addEventListener('click', function () {
     // generate a new chinese
     generateChinese();
 
+    // update citation
+    updateCitation();
+
 });
 
 // detect if the spacebar is pressed
@@ -28,6 +31,9 @@ document.addEventListener('keydown', function (event) {
         document.getElementById('chinese').innerHTML = '';
         // generate a new chinese
         generateChinese();
+
+        // update citation
+        updateCitation();
     }
 });
 
@@ -84,4 +90,8 @@ const generatePassage = () => {
 };
 generatePassage();
 
+const updateCitation = () => {
+    document.getElementById('citation').innerHTML = '- Tao Te Ching, Chapter ' + (Math.floor(Math.random() * 100) + 81);
 
+};
+updateCitation();
